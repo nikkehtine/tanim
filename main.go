@@ -15,12 +15,12 @@ func (g *Game) Update() error {
 }
 
 func (g *Game) Draw(screen *ebiten.Image) {
-	screen.Fill(color.Gray{16})
+	screen.Fill(color.RGBA{0xff, 0x33, 0x33, 0xff})
 	ebitenutil.DebugPrint(screen, "Hello World!")
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeight int) {
-	return 320, 240
+	return outsideWidth / 2, outsideHeight / 2
 }
 
 func main() {
