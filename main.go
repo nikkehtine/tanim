@@ -16,6 +16,13 @@ func (g *Game) Update() error {
 
 func (g *Game) Draw(screen *ebiten.Image) {
 	screen.Fill(color.RGBA{0xff, 0x33, 0x33, 0xff})
+
+	boxImg := ebiten.NewImage(100, 15)
+	boxImg.Fill(color.Black)
+	boxOpts := ebiten.DrawImageOptions{}
+
+	screen.DrawImage(boxImg, &boxOpts)
+
 	ebitenutil.DebugPrint(screen, "Hello World!")
 }
 
